@@ -1,0 +1,61 @@
+/* V3 chart polish: tighter editorial plotting, stronger hierarchy, direct reading. */
+.editorialFigure__chart { min-height: 0; padding: 7px 0 5px; }
+.echart { height: 264px; }
+.dumbbellChart { width: min(100% - 8px, 800px); padding: 11px 0 4px; }
+.dumbbellChart__legend { align-items: center; margin-bottom: 17px; padding-bottom: 9px; border-bottom: 1px solid rgba(216,203,189,.65); font-size: 11px; letter-spacing: .04em; }
+.dumbbellRow { grid-template-columns: 130px minmax(180px, 1fr) 82px; gap: 16px; margin: 18px 0 25px; }
+.dumbbellRow__visual { min-width: 0; }
+.dumbbellRow__scale { display: flex; justify-content: space-between; margin: 0 1px 7px; color: var(--soft-ink); font-family: Arial, sans-serif; font-size: 10px; line-height: 1; }
+.dumbbellRow__track { height: 3px; background: repeating-linear-gradient(90deg, var(--hairline) 0 1px, transparent 1px 25%); }
+.dumbbellRow__line { top: 0; height: 3px; background: var(--pale-orange); opacity: .85; }
+.dumbbellRow__point { width: 13px; height: 13px; box-shadow: none; }
+.dumbbellRow__values { font-size: 12px; letter-spacing: .01em; }
+.dumbbellRow__meta { margin-top: -12px; font-size: 10px; letter-spacing: .02em; }
+.knownNodes { width: min(100% - 8px, 800px); padding: 15px 0 8px; }
+.knownNodes__header { display: flex; justify-content: space-between; margin-bottom: 13px; color: var(--soft-ink); font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+.knownNodes__caption { display: none; }
+.knownNodes__grid { gap: 0; border-top: 1px solid var(--hairline); }
+.knownNode { min-height: 116px; padding: 18px 20px 9px; border-right: 1px solid var(--hairline); }
+.knownNode:last-child { border-right: 0; }
+.knownNode__year { font-size: 11px; }
+.knownNode__dot { width: 16px; height: 16px; margin: 12px 0 13px; border-width: 3px; box-shadow: none; }
+.knownNode__label { max-width: 260px; font-size: 14px; }
+.clusterFigure { width: min(100% - 8px, 980px); padding: 13px 0 7px; }
+.clusterFigure__caption { margin-bottom: 14px; font-size: 10px; }
+.clusterShares { gap: 28px; padding-bottom: 26px; }
+.clusterShare__bar { height: 12px; margin-bottom: 11px; }
+.clusterShare__value { display: flex; align-items: baseline; gap: 8px; min-height: 27px; }
+.clusterShare strong { font-size: 26px; }
+.clusterShare__value small { color: var(--accent); font-family: Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .04em; }
+.clusterShare > span { margin-top: 4px; font-size: 12px; }
+.matrixLegend { margin: 20px 0 4px 90px; font-size: 10px; letter-spacing: .03em; }
+.matrixScale { display: flex; justify-content: space-between; margin: 0 4px 7px 90px; color: var(--soft-ink); font-family: Arial, sans-serif; font-size: 10px; }
+.matrixRow { margin: 12px 0 25px; }
+.matrixTrack { height: 78px; background: repeating-linear-gradient(90deg, transparent 0 19.8%, rgba(216,203,189,.42) 19.8% 20%); }
+.matrixTrack__zero { opacity: .9; }
+.matrixEntry { gap: 7px; font-size: 10px; }
+.matrixEntry i { width: 14px; height: 14px; box-shadow: none; }
+.clusterLegend { gap: 22px; margin-top: 4px; font-size: 10px; }
+.policyTimeline { padding-top: 8px; }
+.policyTimeline__item { min-height: 84px; }
+.policyTimeline__marker::before { width: 10px; height: 10px; left: -5.5px; }
+
+@media (max-width: 700px) {
+  .editorialFigure__chart { padding-top: 4px; }
+  .echart { height: 236px; }
+  .dumbbellChart, .knownNodes, .clusterFigure { width: min(100% - 8px, 740px); }
+  .dumbbellRow { grid-template-columns: 78px minmax(72px, 1fr) 60px; gap: 8px; margin-top: 17px; }
+  .dumbbellRow__scale { font-size: 9px; }
+  .dumbbellRow__meta { grid-column: 2 / 4; }
+  .knownNode { padding-left: 10px; padding-right: 10px; }
+  .clusterShares { gap: 11px; }
+  .clusterShare strong { font-size: 21px; }
+  .clusterShare__value { gap: 4px; }
+  .clusterShare__value small { font-size: 9px; }
+  .matrixLegend { margin-left: 58px; }
+  .matrixScale { margin-left: 58px; }
+  .matrixRow { grid-template-columns: 50px 1fr; gap: 8px; }
+  .matrixTrack { height: 72px; }
+  .matrixEntry em { font-size: 9px; }
+  .clusterLegend { gap: 10px; }
+}

@@ -1,0 +1,13 @@
+.bigNumberBand { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: 29px 8px 34px; padding: 16px 0 14px; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+.bigNumber { min-width: 0; padding: 0 12px; border: 0; }
+.bigNumber + .bigNumber { border-left: 1px solid var(--hairline); }
+.bigNumber strong { overflow: hidden; color: var(--accent); font-size: clamp(1.38rem, 5vw, 2.35rem); line-height: 1.05; text-overflow: clip; white-space: nowrap; }
+.bigNumber__label { min-height: 2.8em; margin-top: 9px; font-size: 13px; line-height: 1.4; }
+.bigNumber__detail { margin-top: 5px; font-size: 10px; line-height: 1.45; }
+
+@media (max-width: 390px) {
+  .bigNumber { padding: 0 7px; }
+  .bigNumber strong { font-size: 1.28rem; letter-spacing: -.06em; }
+  .bigNumber__label { font-size: 11px; }
+  .bigNumber__detail { font-size: 9px; }
+}
